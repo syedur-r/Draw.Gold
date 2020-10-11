@@ -1,0 +1,175 @@
+/* Imports the montserrat font from google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+html, body {
+   font-family: 'Montserrat', sans-serif; /* sets the font style of the entire app */
+   margin: auto;
+   height: 100%; /* sets the height of the body */
+   overflow-x: hidden; /* hides the horizontal scroll bar */
+   overflow-y: hidden; /* hides the vertical scroll bar */
+   user-select:none; /* Stop highlighting text */
+}
+
+/* LOADING SCREEN */
+#preloader {
+   background: #ffffff; /* sets the background of the preloader as white */
+   position: absolute;  /* uses absolute values for the position */
+   top: 50%; /* moves the preloader image down by 50% */
+   left: 50%; /* moves the preloader image to the right by 50% */
+   transform: translate(-50%, -50%);  /* translates the preloader image to the center of the screen */
+   z-index: 1; /* Puts the loader on top of everything */
+}
+/* END OF LOADING SCREEN */
+
+img {
+   -webkit-user-drag: none;  /* Stops the dragging of ghost images */
+}
+
+/* DRAW.GOLD TITLE */
+.title {
+   color: rgb(228, 137, 48);  /* sets the colour of the Draw.gold text */
+}
+/* END OF DRAW.GOLD TITLE */
+
+/* LOAD SAVE AND CLEAR BUTTONS */
+#saveImageButton {
+   margin-left: 1rem; /* moves the save button to the right by 1rem */
+}
+#savingBtn, #loadImgBtn, #clearBtn {
+   margin-top: 3px; /* shift the save, load and clear button down by 3 pixels */
+}
+#savingBtn:hover, #loadImgBtn:hover, #clearBtn:hover {
+   cursor: pointer; /* sets the cursor for the save, load and clear buttons as a pointer when hovered */
+}
+#savingBtn:focus, #loadImgBtn:focus, #clearBtn:focus {
+   outline: none;  /* removes the blue outline for the save, load, and clear buttons */
+}
+/* END OF LOAD SAVE AND CLEAR BUTTONS */
+
+/* FOREGROUND COLOUR BUTTONS */
+#frgrndBtn1 {
+   margin-left: 18rem; /* Moves all the theme buttons to the right by 20rem */
+   font-weight: bolder; /* sets the text as bold for the current theme */
+}
+#frgrndBtn1, #frgrndBtn2, #frgrndBtn3 {
+   cursor: pointer; /* sets the cursor for the theme 1,2,3 buttons as a pointer */
+   width: 80px;
+   height: 25px;
+   font-size: 65%; /* sets the font size */
+   background-color: #141a46; /* sets the background colour of the foreground colour buttons */
+   color: rgb(228, 147, 48);
+   border: none; /* removes all the borders */
+}
+#frgrndBtn1:focus, #frgrndBtn2:focus, #frgrndBtn3:focus {
+   outline: none; /* removes the blue outline for the theme 1,2,3 buttons */
+}
+/* END OF FOREGROUND COLOUR BUTTONS */
+
+/* GRID COMPONENTS */
+.heading {
+   grid-area: heading; /* assigned as a grid component */
+   padding-left: 40%;
+}
+#navBar {
+   grid-area: navBar; /* assigned as a grid component */
+   overflow-y: scroll; /* enables vertical scroll bar for the navbar elements */
+}
+#components {
+   grid-area: components; /* assigned as a grid component */
+}
+.palette {
+   grid-area: palette; /* assigned as a grid component */
+   display: flex; /* displays the palette as a flexible item */
+   flex-direction: grid; 
+   flex-flow: wrap; /* wraps the flexible items */
+}
+.selection {
+   grid-area: selection; /* assigned as a grid component */
+   padding: 15px 25px; /* creates the padding for the option buttons */
+}
+/* END OF GRID COMPONENTS */
+
+/* CABINET ITEMS - Displays the cabinet items and the select box around them */
+.navBarElements {
+   max-height: 50px;
+   max-width: 50px;
+   padding: 5px; /* creates the bottom line spacing for the elements */
+}
+.navBarElements img {
+   max-height: 50px; /* sets the max height of the cabinet icons */
+   max-width: 50px;  /* sets the max width of the cabinet icons */
+}
+/* END OF CABINET ITEMS */
+
+/* COLOUR PALETTE */
+.colourGroup{
+   border-radius: 50%; /* Transforms the colours into a circle */
+   width: 40px;
+   height: 40px;
+   max-height: 40px;
+   max-width: 40px;
+   margin: 5px;
+}
+/* END OF COLOUR PALETTE */
+
+/* CREATING THE GRID */
+.canvasCasing {
+   display: grid; /* displays all items as a grid */
+   height: 100%;
+   background-color: #505359; /* Sets the background colour behind the canvas */
+   color: #000; /* sets the text colour as black */
+   /* 1250px refers to the margin of the colour palette */
+   grid-template-columns: 1fr 1225px minmax(65px, 65px); /* COLUMNS SUITABLE FOR MACBOOK PRO 13" SCREEN SIZE */
+   grid-template-rows: 35px minmax(730px, 1fr) 160px; /* specifies the size of the row grids, minmax defines the size range >= min and <= max */
+   grid-template-areas: "heading heading heading" /* Displays the heading on the top */
+                        "components components navBar" /* Displays the canvas in the middle and the navbar on the side */
+                        "selection palette palette"; /* Displays the selections on the bottom left and the palette on the bottom right*/
+}
+/* END OF CREATING THE GRID */
+
+/* COLOURS FOR THE LAYOUT */
+.elements {
+   background-color: rgb(228, 137, 48); /* Sets the theme for the foreground colour */
+   color: #fff; 
+   font-size: 150%;
+}
+.heading {
+   background-color: #141a46; /* sets the background colour for the heading */
+}
+/* END OF COLOURS FOR THE LAYOUT */
+
+/* MEDIA QUERIES FOR LARGE SCREEN SIZE - IDEALLY FOR LAPTOPS LARGER THAN 15" */
+@media (min-width: 1450px) {
+   .canvasCasing {
+      grid-template-columns: 1fr 1200px minmax(85px, 85px);
+      grid-template-rows: 35px minmax(665px, 1fr) 160px;
+   }
+   #preloader {
+      width: 100%;
+   }
+   #frgrndBtn1 {
+   margin-left: 17rem;
+   }
+}
+
+/* MOBILE & TABLET VIEW */
+@media (max-width: 1024px) {
+   .canvasCasing {
+      grid-template-columns: 1fr 350px minmax(70px, 70px);
+      grid-template-rows: 35px minmax(665px, 1fr) 160px;
+   }
+   #preloader {
+      width: 150%;
+      height: 100%;
+   }
+   #frgrndBtn1 {
+      margin-left: 1.5rem;
+   }
+   .selection {
+      padding-left: 26rem;
+   }
+   #components {
+      width: 50%;
+      height: 50%;
+   }
+}

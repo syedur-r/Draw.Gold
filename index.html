@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Draw.gold</title>
+
+   <!--  Libraries  -->
+   <script src="libraries/jquery-3.3.1.js"></script>
+   <script src="libraries/p5.min.js"></script>
+   <script src="libraries/p5.dom.js"></script>
+
+   <!--  Scripts for Preloader and Sketch File  -->
+   <script src="preloader/preloader.js"></script>
+   <script src="sketch.js"></script>
+
+   <!--  Stylesheet  -->
+   <link rel="stylesheet" type="text/css" href="style/main.css">
+
+   <!--  Icon  -->
+   <link rel="shortcut icon" type="image/png" href="graphics/icon.png">
+
+   <!--  Scripts for Helper Functions  -->
+   <script src="helper%20functions/assistant.js"></script>
+   <script src="helper%20functions/canvasBounds.js"></script>
+   <script src="helper%20functions/keyShortcuts.js"></script>
+   <script src="helper%20functions/formulas.js"></script>
+   <script src="helper%20functions/timer.js"></script>
+   <script src="helper%20functions/stack.js"></script>
+   <script src="helper%20functions/undo.js"></script>
+   <script src="helper%20functions/pixels.js"></script>
+   
+
+   <!--  Scripts for Setup() Function  -->
+   <script src="style/themes.js"></script>
+   <script src="cabinet/cabinet.js"></script>
+   <script src="colours/palette.js"></script>
+
+   <!--  Scripts for Draw() Function  -->
+   <script src="elements/resizeCanvas.js"></script>
+   <script src="elements/gaussianBlur.js"></script>
+   <script src="elements/penTool.js"></script>
+   <script src="elements/rainbowPen.js"></script>
+   <script src="elements/paintBucket.js"></script>
+   <script src="elements/eraser.js"></script>
+   <script src="elements/brush.js"></script>
+   <script src="elements/rainbowBrush.js"></script>
+   <script src="elements/pencil.js"></script>
+   <script src="elements/symmetryicalPen.js"></script>
+   <script src="elements/text.js"></script>
+   <script src="elements/rectangle.js"></script>
+   <script src="elements/ellipse.js"></script>
+   <script src="elements/triangle.js"></script>
+   <script src="elements/line.js"></script>
+   <script src="elements/polygon.js"></script>
+   <script src="elements/roundRect.js"></script>
+   <script src="elements/rightAngleTriangle.js"></script>
+   <script src="elements/star.js"></script>
+   <script src="elements/freeHandShape.js"></script>
+   <script src="elements/stamp.js"></script>
+   <script src="elements/airBrush.js"></script>
+   <script src="elements/spirograph.js"></script>
+   <script src="elements/rainbowSpiro.js"></script>
+</head>
+
+<body>
+   <!--  Preloading the animation before the loading of the application  -->
+   <div id="preloader">
+      <img src="graphics/preloader.gif" height="1125" width="1500" alt="Loading Screen Animation">
+   </div>
+
+   <div class="canvasCasing">
+      <!--  Elements for the cabinet features  -->
+      <div class="elements" id="navBar"></div>
+      <!--  container for the canvas grid  -->
+      <div id="components"></div>
+      <!--  container for the palette grid  -->
+      <div class="elements palette"></div>
+      <!--  container for the selector buttons  -->
+      <div class="elements selection"></div>
+      <div class="elements selection2"></div>
+      <div class="elements selection3"></div>
+
+      <!--        Elements of the header      -->
+      <div class="elements heading">
+         <strong class="title">Draw.gold</strong>
+         <!--      Loading the image      -->
+         <button id="loadImgBtn"><img src="graphics/loadBtn.png" height="20" width="20" alt="loading image button"></button>
+         <!--      Saving the image      -->
+         <button id="savingBtn"><img src="graphics/saveBtn.png" height="20" width="20" alt="save canvas button"></button>
+         <!--      Clearing the image      -->
+         <button id="clearBtn"><img src="graphics/clearBtn.png" height="20" width="20" alt="clear canvas button"></button>
+         <!--      Undoing a single task      -->
+         <button id="undoBtn"><img src="graphics/undoBtn.png" height="20" width="20" alt="undo button"></button>
+
+         <!--      Foreground Colour 1      -->
+         <button id="frgrndBtn1">Theme 1</button>
+         <!--      Foreground Colour 2      -->
+         <button id="frgrndBtn2">Theme 2</button>
+         <!--      Foreground Colour 3      -->
+         <button id="frgrndBtn3">Theme 3</button>
+      </div>
+   </div>
+</body>
+
+</html>
