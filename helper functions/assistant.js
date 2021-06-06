@@ -2,13 +2,15 @@ function Assistant() {
    let vector; // declares the image argument for the load button
    let fileInput = createFileInput(loadImage); // creates a new file input for the load stream
    let text = createElement('h1'); // Creates a new h1 text using the dom library
+   var fileLoaderWidth;
    
    fileInput.hide(); // hiders the file input
-   fileInput.position(925, 8); // sets the position for the file input
+   fileLoaderWidth = (width >= 1682) ? width/4+100 : 925;
+   fileInput.position(fileLoaderWidth, 8); // sets the position for the file input
    fileInput.style('color', 'white'); // sets the text colour of the file input as white
    text.hide(); // hides the text element
    text.html("Click the load button"); // assigns a string to the h1 text element using html()
-   text.position(925, 0); // sets the position for the text
+   text.position(fileLoaderWidth, 0); // sets the position for the text
    text.style('font-size', '12px').style('color', 'white'); // adds some styling to the text
    
    //event handler for the load image button
@@ -34,6 +36,7 @@ function Assistant() {
       for (var i = 0; i < previousState.arr.length; i++) {
          previousState.arr.length = 0;
       }
+      fileInput.hide(); // hiders the file input
    });
    
    //event handler for the undo button event. Undo a single task
