@@ -184,8 +184,8 @@ img {
 /* for 27" monitor */
 @media (min-width: 1682px) {
     .canvasCasing {
-      grid-template-columns: 1fr 1250px minmax(68px, 68px);
-      grid-template-rows: 35px minmax(900px, 1fr) 160px;
+      grid-template-columns: 1fr 1200px minmax(68px, 68px);
+      grid-template-rows: 35px minmax(865px, 1fr) 160px;
    }
    
    button#frgrndBtn1 {
