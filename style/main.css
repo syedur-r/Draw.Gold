@@ -138,20 +138,6 @@ img {
 }
 /* END OF COLOURS FOR THE LAYOUT */
 
-/* MEDIA QUERIES FOR LARGE SCREEN SIZE - IDEALLY FOR LAPTOPS LARGER THAN 15" */
-@media (min-width: 1450px) {
-   .canvasCasing {
-      grid-template-columns: 1fr 1200px minmax(85px, 85px);
-      grid-template-rows: 35px minmax(665px, 1fr) 160px;
-   }
-   #preloader {
-      width: 100%;
-   }
-   #frgrndBtn1 {
-   margin-left: 17rem;
-   }
-}
-
 /* MOBILE & TABLET VIEW */
 @media (max-width: 1024px) {
    .canvasCasing {
@@ -162,8 +148,8 @@ img {
       width: 150%;
       height: 100%;
    }
-   #frgrndBtn1 {
-      margin-left: 1.5rem;
+   button#frgrndBtn1 {
+      margin-left: .2rem;
    }
    .selection {
       padding-left: 26rem;
@@ -171,5 +157,38 @@ img {
    #components {
       width: 50%;
       height: 50%;
+   }
+}
+
+@media only screen and (max-width: 1335px) {    
+   .canvasCasing {
+      grid-template-columns: 1fr 350px minmax(68px, 68px);
+      grid-template-rows: 35px minmax(665px, 1fr) 160px;
+   }
+}
+
+/* MEDIA QUERIES FOR LARGE SCREEN SIZE - IDEALLY FOR LAPTOPS LARGER THAN 15" */
+@media (min-width: 1450px) {
+   .canvasCasing {
+      grid-template-columns: 1fr 1200px minmax(85px, 85px);
+      grid-template-rows: 35px minmax(665px, 1fr) 160px;
+   }
+   #preloader {
+      width: 100%;
+   }
+   button#frgrndBtn1 {
+   margin-left: 17rem;
+   }
+}
+
+/* for 27" monitor */
+@media (min-width: 1682px) {
+    .canvasCasing {
+      grid-template-columns: 1fr 1250px minmax(68px, 68px);
+      grid-template-rows: 35px minmax(900px, 1fr) 160px;
+   }
+   
+   button#frgrndBtn1 {
+      margin-left: 36rem;
    }
 }
