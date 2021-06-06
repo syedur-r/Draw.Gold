@@ -120,7 +120,7 @@ img {
    color: #000; /* sets the text colour as black */
    /* 1250px refers to the margin of the colour palette */
    grid-template-columns: 1fr 1225px minmax(65px, 65px); /* COLUMNS SUITABLE FOR MACBOOK PRO 13" SCREEN SIZE */
-   grid-template-rows: 35px minmax(730px, 1fr) 160px; /* specifies the size of the row grids, minmax defines the size range >= min and <= max */
+   grid-template-rows: 35px minmax(690px, 1fr) 160px; /* specifies the size of the row grids, minmax defines the size range >= min and <= max */
    grid-template-areas: "heading heading heading" /* Displays the heading on the top */
                         "components components navBar" /* Displays the canvas in the middle and the navbar on the side */
                         "selection palette palette"; /* Displays the selections on the bottom left and the palette on the bottom right*/
